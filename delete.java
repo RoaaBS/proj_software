@@ -12,7 +12,9 @@ public class delete extends appointment {
 	String datebooked;
 	String Id;
 	Patient personn;
-	
+	delete(appointment i){
+	aapp=i;
+	}
 	@Given("that the admainn is not logged in")
 	public void that_the_admainn_is_not_logged_in() {
 		case1.loginflag=false;

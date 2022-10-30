@@ -21,8 +21,13 @@ public class logout {
 	admin.setLogged(true);
 	}
 
-	@When("admin logs out")
-	public void admin_logs_out() {
+
+	@When("the admin logs out")
+	public void the_admin_logs_out() {
+	
+
+
+
 	admin.logOut();
 	}
 
