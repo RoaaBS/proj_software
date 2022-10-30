@@ -17,11 +17,12 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Background:
- | day | week | month  |
- |   2 | 1    | octobar |
- | 10  |  2    | november    |
 Feature: Add Appointment for patients
+Background:
+| day | week | month  |
+ |   2 | 1    | octobar |
+| 10  |  2    | november    |
+
 
 
  Scenario: Add an appointment successfully
@@ -33,15 +34,15 @@ Feature: Add Appointment for patients
 	
 Scenario: Add aappointment  when the adminstrator is not logged in
 	Given that the administrator is not logged in
- 	And there is a patient with id  "123", name "seema", gender"female", ,age "7",phone number "0595676812",D.O.A " 02/10/2022",Final Diagnosis"cough ",General Doctor"dima awda"
+ 	And there is a patient with id  "123"
 	When the appointment  is added to the system
 	Then the error message "Administrator login required" is given
 	
 	
 	Scenario: Add aappointment with booked date 
 	Given that the administrator is logged in
- 	And there is a patient with id   id "456" , name "ali",gender"male", ,age "10",phone number "0595676813",D.O.A "  02/10/2022 ",Final Diagnosis"vomiting  ",General Doctor"mohammad abusamra"
-	When the appointment  is"02/10/2022" 
+ 	And there is a patient with id "123", name "seema", gender"female", ,age "7",phone number "0595676812",D.O.A " 02/10/2022",Final Diagnosis"cough ",General Doctor"dima awda"
+	When the appointment  is"10/11/2022" 
 	Then the error message "Appointment booked" is given
 	
   
