@@ -18,7 +18,7 @@ public class reportStep {
 		er=e;}
 	
 	@Given("these are the data")
-	public void these_are_the_data(io.cucumber.datatable.DataTable dataTable) {
+	public void these_are_the_data() {
 	  
 	}
 
