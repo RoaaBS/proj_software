@@ -1,10 +1,16 @@
 package fall2020project;
 
+import java.util.logging.Logger;
+
+
+
 public class Data {
 
 	public String password;
 	public String email;
-
+	boolean logged;
+    Logger logger
+            = Logger.getLogger(Data.class.getName());
 
 	public Data()
 	{
@@ -30,8 +36,22 @@ public class Data {
 		}
 		return 0;
 	}
-		
-	}
+	 public boolean isLogged() {
+	        return logged;
+	    }
+
+	  
+
+	    public void logOut() {
+	            logged=false;
+	    }
+
+	    public void setLogged(boolean logged) {
+	        this.logged = logged;
+	    }
+			
+		}
+	
 
 	
 

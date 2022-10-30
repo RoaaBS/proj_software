@@ -10,6 +10,7 @@ public class Patient extends person{
 	public String name;
 	public String age;
 static Patient personn;
+public String price;
 	public String gender;
 	public String phone_number;
 	public DateServer dateServ;

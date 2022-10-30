@@ -18,6 +18,7 @@ public class appointment extends app {
 	public  Calendar d_o_a  ;
 	
 	public boolean added;
+	public boolean delete;
 	public static ArrayList<appointment> app ;
 	public appointment() {
 		dateServ= new DateServer();
@@ -32,5 +33,10 @@ public class appointment extends app {
 	}
 	public void sendreminder(String email ,String su ,String body) {
 		emailServer.senEmail(email, su, body);
+	}
+	public static void add(int i, String date) {
+		
+		
+		
 	}
 }
