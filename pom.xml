@@ -3,8 +3,7 @@
   <groupId>fall2020</groupId>
   <artifactId>fall2020project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
-  
+    
  <dependencies>
   <dependency>
     <groupId>junit</groupId>
@@ -40,5 +39,6 @@
 </dependency>
   
   </dependencies>
+
  
 </project>
