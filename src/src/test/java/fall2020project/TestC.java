@@ -6,8 +6,8 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="use-cases",
-plugin= {"html: target/cucumber.html"},
+@CucumberOptions(features="use-cases",monochrome=true,
+snippets=SnippetType.CAMELCASE,
 glue={"fall2020project"}
 )
 public class TestC {

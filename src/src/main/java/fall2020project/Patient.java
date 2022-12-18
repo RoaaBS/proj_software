@@ -9,10 +9,11 @@ public class Patient extends person{
 	public String id;
 	public String name;
 	public String age;
-static Patient personn;
+
 public String price;
 	public String gender;
 	public String phone_number;
+	public String email;
 	public DateServer dateServ;
 	public String company_number;
 	public String GeneralDoctor; 
@@ -23,6 +24,7 @@ public String price;
 	
 public boolean added;
 public Integer dateHolder;
+public String tyb;
 public static ArrayList<Patient> person ;
 
 public Patient() {
@@ -37,14 +39,21 @@ public void setDateServer(DateServer dateServ) {
 public void setEmailServer(EmailServer emailServer) {
 
 }
-public void sendreminder(String email ,String su ,String body) {
+public void sendreminder1(String email  ,String su,String body) {
 	emailServer.senEmail(email, su, body);
 }
 
-public void setDate(Calendar calender) {
+public void setDate(Calendar calender, Patient personn) {
 	dateServer.setDate(calender);
 
+	
 	personn.setDateServer(dateServer);
+	
+}
+
+@Override
+public void sendreminder(String email, String su, String body) {
+	// TODO Auto-generated method stub
 	
 }
 

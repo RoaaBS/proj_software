@@ -29,7 +29,7 @@ public class report extends person{
 		public void setEmailServer(EmailServer emailServer) {
 
 		}
-		public void sendreminder(String email ,String su ,String body) {
+		public void sendreminder(String email  ,String su,String body) {
 			emailServer.senEmail(email, su, body);
 		}
 
