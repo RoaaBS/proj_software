@@ -7,9 +7,9 @@ abstract class person {
 	
 		public static boolean added;
 	
-		public abstract void setDateServer(DateServer dateServ);
-		public abstract void setEmailServer(EmailServer emailServer);
-		public abstract void sendreminder(String email ,String su ,String body);
+		public  void setDateServer(DateServer dateServ) {}
+		public  void setEmailServer(EmailServer emailServer) {}
+		public void sendreminder(String email ,String su ,String body) {}
 	}
 
 

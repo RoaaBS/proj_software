@@ -8,36 +8,29 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import java.util.logging.*;
 public class logout {
-	
-
-
-	
+	boolean t;
 
 		Logger logger
 	    = Logger.getLogger(logout.class.getName());
 	Data admin =new Data();
-	@Given("admin is logged in")
-	public void admin_is_logged_in() {
-	admin.setLogged(true);
+	@Given("Admin already log in")
+	public void admin_already_log_in() {
+		admin.setLogged(true);
 	}
-
-
-	@When("the admin logs out")
-	public void the_admin_logs_out() {
+	
 	
 
 
-
-	admin.logOut();
+	@When("{string} select to log out")
+	public void select_to_log_out(String string) {
+		admin.logOut();
+		}
+	
+	@Then("log out done")
+	public void log_out_done() {
+		assertFalse(admin.isLogged());
+		logger.log(Level.INFO,"logged Out");
 	}
-
-	@Then("remove admin authorities")
-	public void remove_admin_authorities() {
-	assertFalse(admin.isLogged());
-	logger.log(Level.INFO,"logged Out");
-	}
-		
-
 
 	
 	

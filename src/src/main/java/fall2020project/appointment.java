@@ -16,13 +16,11 @@ public class appointment extends app {
 	public String FinalDiagnosis;
 	public EmailServer emailServer= new EmailServer();
 	public  Calendar d_o_a  ;
-	
 	public boolean added;
 	public boolean delete;
 	public static ArrayList<appointment> app ;
 	public appointment() {
 		dateServ= new DateServer();
-
 	}
 	public void setDateServer(DateServer dateServ) {
 		this.dateServ=dateServ;
@@ -32,11 +30,11 @@ public class appointment extends app {
 
 	}
 	public void sendreminder(String email ,String su ,String body) {
-		emailServer.senEmail(email, su, body);
+		appointment.senEmail(email, su, body);
 	}
-	public static void add(int i, String date) {
-		
-		
-		
+	public static void senEmail(String email ,String subject,String body) {
+		appointment.senEmail(email, subject, body);
 	}
-}
+	public void add(int i, String date) {
+	}}
+	

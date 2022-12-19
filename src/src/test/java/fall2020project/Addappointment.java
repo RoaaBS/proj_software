@@ -15,7 +15,7 @@ import io.cucumber.java.en.When;
 public class Addappointment {
 	DateServer dateServer = new DateServer() ;
 	Patient personn;
-	DateHolder dateHolder;
+/*	DateHolder dateHolder;*/
 	
 boolean booked=true;
 String errr;
@@ -25,9 +25,9 @@ Patient dateofa;
 		
 	
 
-		Addappointment(appointment i,DateHolder j){
+		Addappointment(appointment i){
 			aapp=i;
-		dateHolder=j;
+		/*dateHolder=j;*/
 
 		}
 		public Addappointment(Patient person,errorhandling e,appointment aapp ) {

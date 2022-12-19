@@ -11,11 +11,6 @@ import io.cucumber.java.en.When;
 public class case1 {
 	Data c;
 	
-	
-	public case1()
-	{
-		c=new Data();
-	}
 	static boolean loginflag;
 	public  case1( Data r) {
 		c=new Data(r);

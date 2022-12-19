@@ -19,7 +19,7 @@ public String price;
 	public String GeneralDoctor; 
 	public String FinalDiagnosis;
 	public EmailServer emailServer= new EmailServer();
-	DateServer dateServer = new DateServer() ;
+	public DateServer dateServer = new DateServer() ;
 	public  Calendar d_o_a  ;
 	
 public boolean added;
@@ -33,14 +33,14 @@ public Patient() {
 }
 
 public void setDateServer(DateServer dateServ) {
-	this.dateServ=dateServ;
+	
 	
 }
 public void setEmailServer(EmailServer emailServer) {
 
 }
-public void sendreminder1(String email  ,String su,String body) {
-	emailServer.senEmail(email, su, body);
+public void sendreminder(String email  ,String su,String body) {
+	appointment.senEmail(email, su, body);
 }
 
 public void setDate(Calendar calender, Patient personn) {
@@ -51,10 +51,8 @@ public void setDate(Calendar calender, Patient personn) {
 	
 }
 
-@Override
-public void sendreminder(String email, String su, String body) {
-	// TODO Auto-generated method stub
-	
 }
 
-}
+
+
+

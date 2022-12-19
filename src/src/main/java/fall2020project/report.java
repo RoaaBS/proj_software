@@ -30,7 +30,7 @@ public class report extends person{
 
 		}
 		public void sendreminder(String email  ,String su,String body) {
-			emailServer.senEmail(email, su, body);
+			appointment.senEmail(email, su, body);
 		}
 
 		
