@@ -12,7 +12,7 @@ public  Calendar datedserver;
 	}
 	public void setDate(Calendar date) {
 		
-		datedserver=date;
+		/*datedserver=date;*/
 	}
 	public Calendar getDate() {
 		

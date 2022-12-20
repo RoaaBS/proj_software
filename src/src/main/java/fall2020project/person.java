@@ -7,9 +7,8 @@ abstract class person {
 	
 		public static boolean added;
 	
-		public  void setDateServer(DateServer dateServ) {}
-		public  void setEmailServer(EmailServer emailServer) {}
-		public void sendreminder(String email ,String su ,String body) {}
+Patient setDateServer;
+
 	}
 
 

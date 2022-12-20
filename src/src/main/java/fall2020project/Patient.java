@@ -1,11 +1,13 @@
 package fall2020project;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 import fall2020project.DateServer;
 import fall2020project.EmailServer;
 
 public class Patient extends person{
+	public static final Patient[] Patient = null;
 	public String id;
 	public String name;
 	public String age;
@@ -25,6 +27,8 @@ public String price;
 public boolean added;
 public Integer dateHolder;
 public String tyb;
+/*public int update;
+public int delete;*/
 public static ArrayList<Patient> person ;
 
 public Patient() {
@@ -43,8 +47,8 @@ public void sendreminder(String email  ,String su,String body) {
 	appointment.senEmail(email, su, body);
 }
 
-public void setDate(Calendar calender, Patient personn) {
-	dateServer.setDate(calender);
+public void setDate(Calendar date, Patient personn) {
+	dateServer.setDate(date);
 
 	
 	personn.setDateServer(dateServer);
