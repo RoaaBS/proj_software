@@ -40,43 +40,42 @@
 
   
   </dependencies>
-  <build>
-	<plugins>
-	<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M7</version>
-        <configuration>
-        <systemPropertyVariables>
-        <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
-        </systemPropertyVariables>
-        </configuration>
-        
-        </plugin>
-        <plugin>
-			  <groupId>org.jacoco</groupId>
-			  <artifactId>jacoco-maven-plugin</artifactId>
-			  <version>0.8.5</version>
-			  
-			  <executions>
-			  <execution>
-				<id>default-prepare-agent</id>
-				<goals>
-				<goal>prepare-agent</goal>
-				</goals>
-				</execution>
-				<execution>
-				<id>default-report</id>
-				<goals>
-				<goal>report</goal>
-				</goals>
-				</execution>
-			  
-			  </executions>
-			</plugin>
-	
-	</plugins>
-	
+ <build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<pluginManagement>
+			<plugins>
+			<!-- The Surefire Plugin is needed to run JUnit 5 tests with Maven -->
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.22.2</version>
+					<configuration></configuration>
+				</plugin>
+				<plugin>
+				<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<executions>
+						<execution>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>report</id>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>report</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>3.9.1.2184</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 
  
