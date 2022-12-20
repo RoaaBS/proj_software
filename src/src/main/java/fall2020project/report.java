@@ -4,11 +4,6 @@ import java.util.Calendar;
 
 import io.cucumber.java.en.Given;
 public class report extends person{
-	
-
-
-
-
 		public String name;
 		public String id;
 		public String percentage_of_increase;

@@ -27,6 +27,8 @@ public String price;
 public boolean added;
 public Integer dateHolder;
 public String tyb;
+public int delete;
+public boolean update;
 /*public int update;
 public int delete;*/
 public static ArrayList<Patient> person ;

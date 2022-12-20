@@ -18,6 +18,8 @@ public class appointment extends app {
 	public  Calendar d_o_a  ;
 	public boolean added;
 	public boolean delete;
+	public boolean visit;
+
 	public static ArrayList<appointment> app ;
 	public appointment() {
 		dateServ= new DateServer();

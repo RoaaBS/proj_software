@@ -13,11 +13,11 @@ import io.cucumber.java.en.When;
 
 
 public class Addappointment {
-	DateServer dateServer = new DateServer() ;
+	/*DateServer dateServer = new DateServer() ;*/
 	Patient personn;
+	public boolean booked;
 /*	DateHolder dateHolder;*/
-	
-boolean booked=true;
+/*boolean booked=true;*/
 String errr;
 Patient dateofa;
 	appointment aapp;
@@ -86,9 +86,6 @@ Patient dateofa;
 		public void there_is_a_patient_with_id1(String string) {
 			  personn.id=string;
 		}
-
-
-
 		@Then("the error message {string} is given")
 		public void the_error_message_is_given(String string) {
 			if(booked==true) {
@@ -99,8 +96,6 @@ Patient dateofa;
 			}
 			
 		}
-	
-
 		@Given("there is a patient with id {string}, name {string}, gender\"female\", ,age {string},phone number {string},D.O.A {string},Final Diagnosis\"cough \",General Doctor\"dima awda\"")
 		public void there_is_a_patient_with_id_name_gender_female_age_phone_number_dateofa_final_diagnosis_cough_general_doctor_dima_awda(String string, String string2, String string3, String string4, String string5) {
 			personn.id=string;
@@ -112,14 +107,6 @@ Patient dateofa;
 		public void the_appointment_is(Integer int1 ,Integer int2,Integer int3) {
 		personn.dateHolder=int1;
 		personn.dateHolder=int2;
-		personn.dateHolder=int3;
-		
-			
+		personn.dateHolder=int3;	
 		}
-
-
-		
-
 	}
-
-
